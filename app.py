@@ -72,17 +72,26 @@ class App(ctk.CTk):
                      font=ctk.CTkFont(size=20, weight="bold")).pack(
             side="left", padx=20)
 
-        ctk.CTkButton(header, text="Parametres", width=100, height=36,
-                      fg_color="gray25", hover_color="gray35",
-                      command=self._open_settings).pack(side="right", padx=(0, 12))
+        # Barre d'outils (row sous le header)
+        toolbar = ctk.CTkFrame(self, corner_radius=0, height=40,
+                               fg_color=("#12122a", "#12122a"))
+        toolbar.pack(fill="x")
+        toolbar.pack_propagate(False)
 
-        ctk.CTkButton(header, text="Rejoindre le groupe", height=36,
-                      fg_color="#1a3a5a", hover_color="#2a5a8a",
-                      command=self._open_join_group).pack(side="right", padx=(0, 6))
-
-        ctk.CTkButton(header, text="Mon ID Syncthing", height=36,
+        ctk.CTkButton(toolbar, text="Mon ID Syncthing", height=28,
                       fg_color="#2a3a1a", hover_color="#3a5a2a",
-                      command=self._open_my_id).pack(side="right", padx=(0, 6))
+                      font=ctk.CTkFont(size=12),
+                      command=self._open_my_id).pack(side="left", padx=(12, 4), pady=6)
+
+        ctk.CTkButton(toolbar, text="Rejoindre le groupe", height=28,
+                      fg_color="#1a3a5a", hover_color="#2a5a8a",
+                      font=ctk.CTkFont(size=12),
+                      command=self._open_join_group).pack(side="left", padx=4, pady=6)
+
+        ctk.CTkButton(toolbar, text="Parametres", height=28,
+                      fg_color="gray25", hover_color="gray35",
+                      font=ctk.CTkFont(size=12),
+                      command=self._open_settings).pack(side="right", padx=(4, 12), pady=6)
 
         # Barre de statut
         status_bar = ctk.CTkFrame(self, corner_radius=12,

@@ -139,7 +139,7 @@ class JoinGroupWindow(ctk.CTkToplevel):
         self.syncthing = syncthing
         self.log_cb = log_cb
         self.title("Rejoindre le groupe")
-        self.geometry("480x270")
+        self.geometry("480x340")
         self.resizable(False, False)
         self.grab_set()
         self._build()
