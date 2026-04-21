@@ -15,7 +15,7 @@ Clique sur **Parametres** en haut à droite et remplis ces champs :
 | **Pseudo** | Ton pseudo Minecraft — garde-le toujours identique |
 | **Chemin du dossier serveur** | Le chemin vers ton dossier de serveur synchronisé (fourni par l'hôte) |
 | **URL Syncthing** | Laisse la valeur par défaut |
-| **Clé API Syncthing** | Dans Syncthing → Actions → Paramètres → Clé API GUI |
+| **Clé API Syncthing** | Dans Syncthing → Actions → Configuration → Clé d'API |
 | **ID dossier Syncthing** | L'identifiant du dossier partagé (fourni par l'hôte) |
 | **Arguments Java** | Laisse la valeur par défaut |
 | **Nom du JAR** | Laisse la valeur par défaut |
